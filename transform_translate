@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+	<title>Rotate</title>
+	<style >
+		body{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: arial;
+			color: white
+			height 100vh;
+			perspective: 200px; /*cuan abierta o cerrada es nuestra perspectiva*/
+			perspective-origin: center; /*podemos elegir entre top,botton,left, right*/
+			/* perspective-origin: top right; podemos combinarlo*/
+		}
+		.container{
+			border:1px solid red;
+		}
+
+		.container:hover .cuadrado{
+			/*transform: translate(100px);*/
+			/*transform: translateX(100px);*/
+			/*transform: translateY(100px);*/
+              /*transform: translate(100px,100px);*/
+              transform: translate3d(-100px,-100px,-100px);/*solo funciona si ponemos la funcion perperctive*/
+              /* transform:translate3d(x,y,z)*/
+		}
+
+		.cuadrado{
+			width: 200px;
+			height: 200px;
+			background: #7dc900;
+			transition: .3s;
+			
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="cuadrado">
+		Hola mundo
+	</div>
+</div>
+
+</body>
+</html>
